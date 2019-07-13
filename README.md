@@ -28,7 +28,7 @@ The FileCahe provides capacity for high concurrency:
 
 + It acqures shared lock for reading on each file so mutiple threads are allowed to read same file at the same time.
 + It request exclusive lock per file for writing to mutiple threads are allowed to write different files at the same time.
-+ It uses AtomicInteger to indicate the state, and try to clear when there's no file is in use (reading or writing). The call of clear() maybe file, but we can avoid global instric lock for supporting clearing. 
++ It uses [AtomicInteger](https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicInteger.html) to indicate the state, and try to clear when there's no file is in use (reading or writing). The call of clear() maybe file, but we can avoid global instric lock for supporting clearing. 
 
 # License
 
